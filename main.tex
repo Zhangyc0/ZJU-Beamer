@@ -1,0 +1,159 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\definecolor{ZJU-blue}{RGB}{0, 63, 136}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\definecolor{myNewColorA}{RGB}{0,63,136}
+\definecolor{myNewColorB}{RGB}{0,63,136}
+\definecolor{myNewColorC}{RGB}{0,63,136}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+
+\title{Your Presentation  Title}
+\titlegraphic{\includegraphics[height=2.1cm]{ZJU.png}}
+\subtitle{Zhejiang University}
+
+\author[Arthur, Zhang] % (optional)
+{***\inst{1} \and ***\inst{2}}
+
+\institute[ZJU] % (optional)
+{
+  \inst{1}%
+  Collage of computer science and technology \\
+  Zhejiang University
+  \and
+  \inst{2}%
+  Collage of computer science and technology \\
+  Zhejiang University
+}
+
+\date[ZJU 2022] % (optional)
+{  April 2022}
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+%---------------------------------------------------------
+
+
+\section{First section}
+
+%---------------------------------------------------------
+%Changing visivility of the text
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in second frame. For the sake of showing an example.
+
+\begin{itemize}
+    \item<1-> Text visible on slide 1
+    \item<2-> Text visible on slide 2
+    \item<3-> Text visible on slides 3
+    \item<4-> Text visible on slide 4
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+%Example of the \pause command
+\begin{frame}
+In this slide \pause
+
+the text will be partially visible \pause
+
+And finally everything will be there
+\end{frame}
+%---------------------------------------------------------
+
+\section{Second section}
+
+%---------------------------------------------------------
+%Highlighting text
+\begin{frame}
+\frametitle{Sample frame title}
+
+In this slide, some important text will be
+\alert{highlighted} because it's important.
+Please, don't abuse it.
+
+\begin{block}{Remark}
+Sample text
+\end{block}
+
+\begin{alertblock}{Important theorem}
+Sample text in red box
+\end{alertblock}
+
+\begin{examples}
+Sample text in green box. The title of the block is ``Examples".
+\end{examples}
+\end{frame}
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+%Two columns
+\begin{frame}
+\frametitle{Two-column slide}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+This is a text in first column.
+$$E=mc^2$$
+\begin{itemize}
+\item First item
+\item Second item
+\end{itemize}
+
+\column{0.5\textwidth}
+This text will be in the second column
+and on a second tought this is a nice looking
+layout in some cases.
+\end{columns}
+\end{frame}
+%---------------------------------------------------------
+
+
+\end{document}
